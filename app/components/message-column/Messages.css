@@ -1,0 +1,110 @@
+.message-entry-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 1rem; /* topbottom: 0.5rem rightleft: 1rem; */
+}
+
+.userinfo-message-container {
+  width: 100%;
+  /*Some reason, this pushes the text-message width to the end*/
+}
+
+.userinfo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.username {
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-right: 0.6rem;
+  padding-top: 0;
+}
+
+.username:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.time-entry {
+  @apply text-neutral-400 font-normal;
+  font-size: 13px;
+  position: relative;
+  top: 2.5px;
+  
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.2rem;
+  min-width: 200px;
+  /*width: 99%; giving the container a width*/
+  /* @apply max-w-full */
+}
+
+.text-message:hover .edit-box {
+  display: block;
+  display: flex;
+  flex-direction: row;
+}
+
+.text-message:hover .time-entry-side {
+  display: block;
+}
+
+.text-message {
+  @apply text-black font-normal leading-snug;
+  position: relative;
+  padding: 2px 88px 2px 8px; 
+  top: -1rem;
+  width: 100%;
+}
+
+.text-message:hover {
+  background-color: rgba(189, 242, 121, 0.21);
+  border-radius: 8px;
+}
+
+.edit-box {
+  @apply flex flex-row justify-between align-middle w-[70px];
+  display: none;
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  padding: 0;
+}
+
+.time-entry-side {
+  display: none;
+  position: absolute;
+  left: -54px;
+  top: 50%; /* Move the top edge to the middle of the container */
+  transform: translateY(-50%); /* Move the element up by half of its height */
+}
+
+.edit-icon {
+  color: black;
+  opacity: 69.42%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  transform: translateY(-7%);
+}
+
+.edit-icon:hover {
+  background-color: rgb(152, 152, 152);
+  border-radius: 10%;
+  align-items: center;
+  display: flex;
+}
+
+.profpop {
+  display: none;
+}
+
+.username:active .profpop {
+  display: block;
+}
+
